@@ -6,7 +6,8 @@ class App < Sinatra::Base
   end
 
   post '/reverse' do
-    puts params
+    og_string = params['string']
+    reverse_string = og_string.reverse
     erb :reversed
   end
 
